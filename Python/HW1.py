@@ -11,6 +11,5 @@ print ('Введите степень 10 у расстояния между пл
 stR=int(input())
 m2=m2*math.pow(10,stm2)
 R=R*math.pow(10,stR)
-print(R)
-F=(G*m1*m2)/(R**2)
+F=(G*m1*m2)/(math.pow(R,2))
 print(F)
