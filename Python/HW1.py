@@ -1,15 +1,12 @@
-import math
-G=6.674*math.pow(10,-11)
-m1=5.97600*math.pow(10,24) 
-print ('Введите массу второй планеты: ')
-m2=float(input())
-print ('Введите cтепень 10 у массы второй планеты: ')
-stm2=int(input())
-print ('Введите расстояние между планетами: ')
-R=float(input())
-print ('Введите степень 10 у расстояния между планетами: ')
-stR=int(input())
-m2=m2*math.pow(10,stm2)
-R=R*math.pow(10,stR)
-F=(G*m1*m2)/(math.pow(R,2))
-print(F)
+print ('Введите скорость Джерри: ')
+x=int(input())
+print ('Введите скорость Тома: ')
+y=int(input())
+if (x>y) or (x<=0) or (y<=0):
+    print ('Том не догонит Джерри')
+else:
+    print('Введите начальное расстояние между ними: ')
+    s=int(input())
+    L=s*x//(y-x)
+    t=L//x
+    print('Время, за которое Том догонит Джерри: ' , t , 'секунд')
