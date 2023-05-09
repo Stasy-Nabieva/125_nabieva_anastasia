@@ -1,0 +1,45 @@
+<html>
+<head>
+<script src="jstest.js"></script>
+<script lang="javascript">
+    // Add event listener on keypress
+    document.addEventListener('keypress', (event) => {
+    var name = event.key;
+    var code = event.code;
+    // Alert the key name and key code on keydown
+    //console.log(`Key pressed ${name} \r\n Key code value: ${code}`);
+    if (code == 'KeyW') clickup();
+    if (code == 'KeyS') clickdown();
+    if (code == 'KeyA') clickleft();
+    if (code == 'KeyD') clickright();
+
+    let inital=10;
+    function getRandomArbitrary(min, max) {
+        return Math.random() * (max - min) + min;
+    }
+    function rightclicked()
+    {
+        let a=10;
+        console.log(' right click');
+        var d = document.getElementById('move');
+        d.style='margin: 0 0 0 '+inital+' ;';
+        inital = inital + getRandomArbitrary(1,15);
+    }
+   
+    function upclicked() {
+        console.log(' up click');
+        var d = document.getElementById('move');
+        d.style = 'margin: 0 0 0 ' + inital + ' ;';
+        top: 10;
+    }
+</script>
+</head>
+<body onkeypress="keypressed(event)">
+    <div>this is js test</div>
+    <div onclick="clickright()">click for move right</div>
+    <div onclick="clickleft()">click for move left</div>
+    <div onclick="clickup()">click for move up</div>
+    <div onclick="clickdown()">click for move down</div>
+    <div id="moving">this will be moving</div>
+</body>
+</html>
