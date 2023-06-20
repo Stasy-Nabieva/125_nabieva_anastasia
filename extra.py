@@ -7,6 +7,6 @@ string=[True,  True,  True,  False,
 
 total = 0
 for i in string:
-            if i is True:
+            if i == True:
                         total += i
 print(total)
